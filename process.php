@@ -1,6 +1,7 @@
 <?php
 set_time_limit(0);
-include 'accounts.php';
+// replace: include 'accounts.php';
+$accounts = json_decode(file_get_contents('accounts.json'), true);
 
 $gift_code = $_POST['gift_code'] ?? '';
 $mh = curl_multi_init();
